@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Speaker Explorer">
+        <div class="slds-p-around_medium">
+            <lightning-input
+                label="Speaker Name"
+                value={name}
+                onchange={handleNameChange}>
+            </lightning-input>
+
+            <lightning-combobox
+                label="Speciality"
+                value={speciality}
+                options={specialityOptions}
+                onchange={handleSpecialityChange}>
+            </lightning-combobox>
+
+            <lightning-button
+                label="Search"
+                variant="brand"
+                class="slds-m-top_small"
+                onclick={handleSearch}>
+            </lightning-button>
+        </div>
+
+        <c-speaker-list speakers={speakers}></c-speaker-list>
+    </lightning-card>
+</template>
